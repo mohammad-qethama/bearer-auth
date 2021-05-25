@@ -10,7 +10,7 @@ const options = {
 };
 mongoose.connect(process.env.MONGODB_URI, options).then(()=>{
 
-require('./src/server.js').startup(process.env.PORT);
+  require('./src/server.js').startup(process.env.PORT);
 
 }).catch(error =>{
   console.error('cant start the Server', error);
